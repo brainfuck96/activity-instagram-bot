@@ -31,20 +31,5 @@ expressApp.get('/', (req, res) => {
 expressApp.listen(port, () => {
 
 
-	(async () => {
-		try {
-	  const browser = await puppeteer.launch({
-  args: ['--no-sandbox']
-});
-	  const page = await browser.newPage();
-	  await page.goto('https://google.com');
-	  await page.screenshot({path: 'example.png'});
-
-	  await browser.close();
-	} catch(err) {
-		console.log(err);
-	}
-	})();
-
   console.log('Example app listening on port 3000!')
 })			

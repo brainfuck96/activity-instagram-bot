@@ -1,0 +1,13 @@
+#!/bin/bash
+export DATABASE_HOST_NAME=localhost
+export DATABASE_PORT=3306
+export DATABASE_USER=myst
+export DATABASE_PASSWORD=17121997
+export DATABASE_NAME=insta
+export SESSION_SECRET=F6CFECE6437C43E3911AE444DCAC3
+export SECRET=CQdyJvG6QA1lTp2SlK7THRox9Z4xedhd
+export PORT=3000
+export IP=localhost
+export DEBUG=insta:server
+
+export BOT_TOKEN=677643440:AAHu-G9_SwPiY8VKRehCrycpDarZdYSJ9M4
