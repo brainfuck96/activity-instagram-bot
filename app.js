@@ -6,10 +6,12 @@ const logger = require('morgan');
 const _ = require('lodash');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+
 // const session = require('express-session');
 // const MySQLStore = require('express-mysql-session')(session);
 
 var app = express();	
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -54,6 +56,10 @@ const connection = mysql.createConnection({
 app.locals = {
     domain:`http://${process.env.IP}:${process.env.PORT}`
 };
+
+// bot section
+
+const bot = require("./bot_setup")(app);
 
 
 app.use(express.static(path.join(__dirname, 'public')));
